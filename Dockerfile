@@ -13,6 +13,8 @@ FROM base AS runtime
 ENV NODE_ENV=production
 COPY --from=build /app/node_modules ./node_modules
 COPY --from=build /app/package.json ./package.json
+COPY --from=build /app/tsconfig.json ./tsconfig.json
 COPY --from=build /app/src ./src
+COPY --from=build /app/migrations ./migrations
 EXPOSE 3000
-CMD ["node", "src/index.js"]
+CMD ["sh", "-c", "npm run migrate && npm start"]

@@ -6,5 +6,6 @@
     "previews": true
   },
   "mounts": [],
-  "rollback": false
+  "rollback": false,
+  "database": { "provider": "neon" }
 }
