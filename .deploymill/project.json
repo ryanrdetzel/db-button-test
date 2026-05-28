@@ -1,0 +1,10 @@
+{
+  "version": 1,
+  "name": "db-button-test",
+  "domains": {
+    "prod": "db-button-test-detzel.apps.deploymill.com",
+    "previews": true
+  },
+  "mounts": [],
+  "rollback": false
+}
